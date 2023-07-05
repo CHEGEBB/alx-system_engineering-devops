@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.html" -newermt "$(date -r ../ +%Y-%m-%d)" -exec cp -u {} ../ \n
+cp *.html ../ || echo "No HTML files to copy"
