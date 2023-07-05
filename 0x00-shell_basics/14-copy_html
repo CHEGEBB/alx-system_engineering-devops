@@ -1,2 +1,2 @@
 #!/bin/bash
-cp *.html ../ || echo "No HTML files to copy"
+cp -u *.html ..
