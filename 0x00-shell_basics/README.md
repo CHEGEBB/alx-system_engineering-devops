@@ -1,14 +1,4 @@
-# How to Change to the Previous Working Directory
+list all files in the current directory and the parent of the working directory and the /boot directory (in this order), in long format
+To list all files in the current directory and the parent of the working directory and the /boot directory (in this order), in long format, run the following command:
 
-This README will show you how to change to the previous working directory in Linux.
-
-## Prerequisites
-
-You will need to have a basic understanding of the Linux command line.
-
-## Steps
-
-1. Open a terminal window.
-2. Run the following command:
-
-cd -
+ls -la . .. /boot
