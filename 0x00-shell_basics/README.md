@@ -1,15 +1,17 @@
-# Display Current Directory Contents
+# Create a Directory Script
 
-This shell script displays the contents of the current directory in a long format, including hidden files. The long format includes detailed information about each file or directory, such as permissions, owner, group, size, and modification time. User and group IDs are displayed numerically.
+This script creates a directory named "my_first_directory" within the "/tmp/" directory. It is a simple script that you can run on a Unix-like system.
+
+## Prerequisites
+
+- This script requires a Unix-like operating system (e.g., Linux, macOS) to run.
+- You need to have appropriate permissions to create directories within the "/tmp/" directory.
 
 ## Usage
 
-1. Open a terminal or command prompt.
+1. Clone or download the script to your local machine.
+2. Open a terminal or command prompt and navigate to the directory where the script is located.
+3. Run the script by executing the following command:
 
-2. Navigate to the directory where you want to display the contents.
-
-3. Run the following command:
-
-   ```shell
-   ls -lan
-
+    ```
+    mkdir /tmp/my_first_directory/
