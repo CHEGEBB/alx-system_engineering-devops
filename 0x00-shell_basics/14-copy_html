@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.html" -newer -mtime 0 -exec cp {} ../ \;
+find . -name "*.html" -newermt "$(date -r ../ +%Y-%m-%d)" -exec cp -u {} ../ \n
