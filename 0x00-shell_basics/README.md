@@ -1,4 +1,5 @@
-list all files in the current directory and the parent of the working directory and the /boot directory (in this order), in long format
-To list all files in the current directory and the parent of the working directory and the /boot directory (in this order), in long format, run the following command:
+# Print the type of the file named iamafile
 
-ls -la . .. /boot
+To print the type of the file named `iamafile`, run the following command:
+
+file /tmp/iamafile
