@@ -1,5 +1,2 @@
-# Print the type of the file named iamafile
-
-To print the type of the file named `iamafile`, run the following command:
-
-file /tmp/iamafile
+#to create a symbolic link to /bin/ls, named __ls__, in the current working directory
+ln -s /bin/ls __ls__
