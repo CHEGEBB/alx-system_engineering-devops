@@ -1,3 +1,3 @@
-#This script deletes all files in the current working directory that end with the character ~.
-#To run the script, simply type the following command in your terminal:
-rm *~
+#This script creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory.
+#to use it type the following command in terminal
+mkdir -p welcome/to/school
