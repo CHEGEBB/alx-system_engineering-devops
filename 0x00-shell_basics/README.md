@@ -1,6 +1,6 @@
-# Display Current Directory Contents in Long Format
+# Display Current Directory Contents in Long Format (Including Hidden Files)
 
-This shell script displays the contents of the current directory in a long format. The long format includes detailed information about each file or directory, such as permissions, owner, size, and modification time.
+This script displays the contents of the current directory, including hidden files, in a long format.
 
 ## Usage
 
@@ -8,8 +8,6 @@ This shell script displays the contents of the current directory in a long forma
 
 2. Navigate to the directory where you want to display the contents.
 
-3. Run the script by executing the following command:
+3. Run the script using the following command:
 
-   ```shell
-   ls -l
-
+ls -la
