@@ -1,8 +1,7 @@
-# groups
+# chown
 
-A shell command that prints all the groups that the current user is part of.
+A shell command that changes the owner of a file.
 
-## Usage
+#use the command
+chown betty hello
 
-#type the following command
-groups
