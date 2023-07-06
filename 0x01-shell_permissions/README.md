@@ -1,2 +1,2 @@
-#use the following command
-mkdir -m 751 my_dir
+#To change the group owner to school for the file hello
+chgrp school hello 
