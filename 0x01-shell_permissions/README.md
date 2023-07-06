@@ -1,2 +1,2 @@
-#Use the following command
-chmod -R ugo+X .
+#use the following command
+mkdir -m 751 my_dir
