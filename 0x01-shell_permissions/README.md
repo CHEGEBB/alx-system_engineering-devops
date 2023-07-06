@@ -1,4 +1,8 @@
-#A simple shell command that prints the effective username of the current user.
+# groups
 
-#The following command is used
-id -u -n
+A shell command that prints all the groups that the current user is part of.
+
+## Usage
+
+#type the following command
+groups
