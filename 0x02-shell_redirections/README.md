@@ -1,8 +1,8 @@
-This is a script to Display all the lines in the file /etc/passwd that do not contain the pattern “bin”.
+This is a script to Display all lines of the file /etc/ssh/sshd_config starting with a letter.
 
 Usage:
 
 Open a text editor and create a new file.
 Copy the following code into the file:
 #!/bin/bash
-grep -i -v "bin" /etc/passwd
+grep -i "^[a-z]" /etc/ssh/sshd_config
