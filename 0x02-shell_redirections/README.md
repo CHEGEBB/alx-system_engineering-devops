@@ -1,8 +1,8 @@
-This is a script that takes a list of words as input and prints only words that appear exactly once.
+This is a script to Display lines containing the pattern “root” from the file /etc/passwd
 
 Usage:
 
 Open a text editor and create a new file.
 Copy the following code into the file:
 #!/bin/bash
-sort | uniq -u
+grep -i "root" /etc/passwd
