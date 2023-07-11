@@ -1,7 +1,7 @@
-# This script  creates a new global variable.
+# This script  prints the result of the addition of 128 with the value stored in the environment variable
 
 
 
 # Type the following in the in the command line.
 #!/bin/bash
-export BEST="School"
+echo $(( 128 + $TRUEKNOWLEDGE ))
