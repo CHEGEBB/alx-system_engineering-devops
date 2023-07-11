@@ -1,7 +1,8 @@
-# This script displays the result of BREATH to the power LOVE
+# This script converts a number from base 2 to base 10
 
 
 
 # Type the following in the in the command line.
+
 #!/bin/bash
-echo $(( BREATH**LOVE ))
+echo $(( 2#$BINARY ))
