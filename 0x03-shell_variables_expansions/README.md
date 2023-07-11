@@ -1,7 +1,7 @@
-# This script  prints the result of POWER divided by DIVIDE, followed by a new line.
+# This script displays the result of BREATH to the power LOVE
 
 
 
 # Type the following in the in the command line.
 #!/bin/bash
-echo $(( $POWER / $DIVIDE ))
+echo $(( BREATH**LOVE ))
