@@ -1,7 +1,7 @@
-# This scriptcreates a new local variable. 
+# This script  creates a new global variable.
 
 
 
 # Type the following in the in the command line.
 #!/bin/bash
-BEST="School"
+export BEST="School"
