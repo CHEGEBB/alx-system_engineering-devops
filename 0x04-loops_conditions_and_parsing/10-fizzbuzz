@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-
-# This script prints the numbers from 1 to 100, each on a new line, except for the following conditions:
-# For multiples of three print Fizz instead of the number and for multiples of five print Buzz.
-# For numbers which are multiples of both three and five print FizzBuzz.
-
+# This script prints the numbers from 1 to 100, each on a new line
 for ((i=1; i<=100; i++)); do
     if ((i % 3 == 0)) && ((i % 5 == 0)); then
         echo "FizzBuzz"
