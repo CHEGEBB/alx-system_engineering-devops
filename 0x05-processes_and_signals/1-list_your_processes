@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script displays a list of currently running processes
-echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
-ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command | awk 'NR>1 {print}'
+# list all my currently running processes
+# source: https://linuxize.com/post/ps-command-in-linux/
+ps -auxf
