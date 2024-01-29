@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Path to the file
+file="/etc/passwd"
+
+# Read the file line by line
+while IFS= read -r line; do
+    # Extract fields from each line using ':' as delimiter
+    # Fields: username (field 1), user ID (field 3), home directory (field 6)
+    echo "$line" | cut -d ':' -f1,3,6
+done < "$file"

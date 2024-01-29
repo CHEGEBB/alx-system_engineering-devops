@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 20 and displays four different messages when the loop reaches 4, 9, and 17
+i=1
+while [ $i -lt 21 ]
+do
+    if [ $i -eq 4 ]
+    then
+        echo "bad luck from China"
+    elif [ $i -eq 9 ]
+    then
+        echo "bad luck from Japan"
+    elif [ $i -eq 17 ]
+    then
+        echo "bad luck from Italy"
+    else
+        echo $i
+    fi
+    i=$((i+1))
+done
