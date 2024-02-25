@@ -4,9 +4,9 @@
 This project focuses on designing various web infrastructures to understand and implement concepts related to DNS, monitoring, web servers, network basics, load balancers, and servers. The tasks are divided into different scenarios, each building on the previous one to enhance the understanding of web infrastructure.
 
 ## Team Members
-- Sheilah Wanyama
--Hellen Atieno
--Brian Chege
+**Sheilah Wanyama**
+**Hellen Atieno**
+**Brian Chege**
 ## Project Timeline
 - Start Date: February 22, 2024, 6:00 AM
 - End Date: February 26, 2024, 6:00 AM
@@ -27,7 +27,7 @@ The project is organized into directories based on the tasks provided:
 - Explain the role of each component.
 - Identify issues with the infrastructure.
 #### URLs
-- Repo: [GitHub Repository Link](insert_link_here)
+- Repo: [GitHub Repository Link](https://github.com/CHEGEBB/alx-system_engineering-devops)
 - Screenshot: [Screenshot Link](insert_link_here)
 
 ### 1. Distributed Web Infrastructure
