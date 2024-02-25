@@ -4,9 +4,9 @@
 This project focuses on designing various web infrastructures to understand and implement concepts related to DNS, monitoring, web servers, network basics, load balancers, and servers. The tasks are divided into different scenarios, each building on the previous one to enhance the understanding of web infrastructure.
 
 ## Team Members
-**Sheilah Wanyama**
-**Hellen Atieno**
-**Brian Chege**
+## Sheilah Wanyama
+## Hellen Atieno**
+## Brian Chege
 ## Project Timeline
 - Start Date: February 22, 2024, 6:00 AM
 - End Date: February 26, 2024, 6:00 AM
