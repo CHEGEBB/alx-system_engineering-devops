@@ -5,7 +5,7 @@ This project focuses on designing various web infrastructures to understand and 
 
 ## Team Members
 ## Sheilah Wanyama
-## Hellen Atieno**
+## Hellen Atieno
 ## Brian Chege
 ## Project Timeline
 - Start Date: February 22, 2024, 6:00 AM
