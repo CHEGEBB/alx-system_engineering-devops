@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-
-#This script configures a web server to return a 404 page
+# Configure your Nginx server to have a custom 404 page
 
 apt-get update
 apt-get install -y nginx
 
 mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
+echo "Hello World!" > /etc/nginx/html/index.html
 touch /etc/nginx/html/404.html
 echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
