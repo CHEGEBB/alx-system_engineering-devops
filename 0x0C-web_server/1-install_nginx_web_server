@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Install nginx on your web-01 server
+#This script installs nginx on a web server and starts the service
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo 'Hello World!' > /var/www/html/index.html
+service nginx start
