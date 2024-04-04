@@ -1,39 +1,31 @@
 #!/usr/bin/env bash
+#This script displays information about subdomains.It takes a domain as an argument and an optional subdomain to query.
 
-# Function to display information about a specific subdomain
-get_subdomain_info() {
-    subdomain=$1
-    domain=$2
-    dig_output=$(dig $subdomain.$domain | awk '/ANSWER SECTION/ {getline; print}')
-    record_type=$(echo "$dig_output" | awk '{print $4}')
-    destination=$(echo "$dig_output" | awk '{print $5}')
-    echo "The subdomain $subdomain is a $record_type record and points to $destination"
+
+# colors
+blue='\e[1;34m'
+brown='\e[0;33m'
+reset='\033[0m'
+
+# variables & parameters
+subdomains=( "www" "lb-01" "web-01" "web-02" )
+domain="$1"
+sub="$2"
+
+dig_cmd () {
+	# func variables
+	sub="$2"
+	INFO="$(dig "$sub.$domain" | grep -A1 'ANSWER SECTION:' | awk 'NR==2')"
+	IP=$(echo "$INFO" | awk '{print $5}')
+	RECORD=$(echo "$INFO" | awk '{print $4}')
+
+	echo -e "${brown}The subdomain ${blue}$sub${brown} is a ${blue}$RECORD${brown} record and points to ${blue}$IP${reset}"
 }
 
-# Function to display information about default subdomains
-get_default_subdomains_info() {
-    domain=$1
-    subdomains=("www" "lb-01" "web-01" "web-02")
-    for subdomain in "${subdomains[@]}"; do
-        get_subdomain_info $subdomain $domain
-    done
-}
-
-# Main script
-
-# Check if number of arguments is less than 1 or more than 2
-if [ $# -lt 1 ] || [ $# -gt 2 ]; then
-    echo "Usage: $0 domain [subdomain]"
-    exit 1
-fi
-
-domain=$1
-subdomain=$2
-
-if [ -z "$subdomain" ]; then
-    # If only domain is provided, display information for default subdomains
-    get_default_subdomains_info $domain
-else
-    # If both domain and subdomain are provided, display information for the specified subdomain
-    get_subdomain_info $subdomain $domain
+if [ $# -eq 1 ]; then
+	for subs in "${subdomains[@]}"; do
+		dig_cmd "$domain" "$subs"
+	done
+elif [ $# -eq 2 ]; then
+	dig_cmd "$domain" "$sub"
 fi
