@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Function to display information about a specific subdomain
+get_subdomain_info() {
+    subdomain=$1
+    domain=$2
+    dig_output=$(dig $subdomain.$domain | awk '/ANSWER SECTION/ {getline; print}')
+    record_type=$(echo "$dig_output" | awk '{print $4}')
+    destination=$(echo "$dig_output" | awk '{print $5}')
+    echo "The subdomain $subdomain is a $record_type record and points to $destination"
+}
+
+# Function to display information about default subdomains
+get_default_subdomains_info() {
+    domain=$1
+    subdomains=("www" "lb-01" "web-01" "web-02")
+    for subdomain in "${subdomains[@]}"; do
+        get_subdomain_info $subdomain $domain
+    done
+}
+
+# Main script
+
+# Check if number of arguments is less than 1 or more than 2
+if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+    echo "Usage: $0 domain [subdomain]"
+    exit 1
+fi
+
+domain=$1
+subdomain=$2
+
+if [ -z "$subdomain" ]; then
+    # If only domain is provided, display information for default subdomains
+    get_default_subdomains_info $domain
+else
+    # If both domain and subdomain are provided, display information for the specified subdomain
+    get_subdomain_info $subdomain $domain
+fi
