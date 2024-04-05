@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#This script fixes the 0-transfer_file_to_web01 file and changes the port from 8080 to 80
+sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+echo "" | sudo dd status=none of=/run/nginx.pid
