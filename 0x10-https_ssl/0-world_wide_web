@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This script displays information about subdomains.It takes a domain as an argument and an optional subdomain to query.
+# Displays informtation about subdomains.
 
 
 # colors
