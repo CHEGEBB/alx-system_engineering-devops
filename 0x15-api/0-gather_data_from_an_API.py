@@ -1,37 +1,32 @@
-#!/usr/bin/env python3
-"""This script returns information about an employee's TODO list progress"""
-import urllib.request
-import urllib.error
-import json
+#!/usr/bin/python3
+"""
+Scrript using REST API for a given employee ID
+Returns information about his/her TODO list progress
+"""
+
+import requests
 import sys
 
-def fetch_todo_progress(employee_id):
-    base_url = "https://jsonplaceholder.typicode.com"
-    user_url = f"{base_url}/users/{employee_id}"
-    todos_url = f"{base_url}/todos?userId={employee_id}"
-
-    try:
-        with urllib.request.urlopen(user_url) as response:
-            user_data = json.loads(response.read().decode())
-
-        with urllib.request.urlopen(todos_url) as response:
-            todos_data = json.loads(response.read().decode())
-
-        completed_tasks = [task['title'] for task in todos_data if task['completed']]
-        total_tasks = len(todos_data)
-        num_completed_tasks = len(completed_tasks)
-        
-        print(f"Employee {user_data['name']} is done with tasks({num_completed_tasks}/{total_tasks}):")
-        for task in completed_tasks:
-            print(f"\t{task}")
-
-    except urllib.error.URLError as e:
-        print("Error: ", e)
-
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python3 script.py <employee_id>")
-        sys.exit(1)
 
-    employee_id = sys.argv[1]
-    fetch_todo_progress(employee_id)
+    url = "https://jsonplaceholder.typicode.com"
+    url_todos = "{url}/todos".format(url=url)
+    url_users = "{url}/users/{id}".format(url=url, id=sys.argv[1])
+    response_user = requests.get(url_users)
+    response_todos = requests.get(url_todos, params={'userId': sys.argv[1]})
+    response_todos_json = response_todos.json()
+    response_user_json = response_user.json()
+    NUMBER_OF_DONE_TASKS = 0
+    TOTAL_NUMBER_OF_TASKS = 0
+    for todos in response_todos_json:
+        if todos.get('completed') is True:
+            NUMBER_OF_DONE_TASKS += 1
+            TOTAL_NUMBER_OF_TASKS += 1
+        else:
+            TOTAL_NUMBER_OF_TASKS += 1
+    print("Employee {} is done with tasks({}/{}):".format
+          (response_user_json.get('name'),
+           NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
+    for todos in response_todos_json:
+        if todos.get('completed') is True:
+            print("\t {}".format(todos.get('title')))
