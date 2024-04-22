@@ -24,4 +24,3 @@ if __name__ == "__main__":
                                       response_user_json.get('username'),
                                       todos.get('completed'),
                                       todos.get('title')])
-            
