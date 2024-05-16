@@ -10,7 +10,7 @@ server {
              internal;
 	}
 	listen [::]:80 default_server;
-	server_name 34.202.234.181;
+	server_name 52.91.145.56;
 	add_header X-Served-By 473254-web-01;
 	location = /airbnb-onepage/ {
 		proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
@@ -20,5 +20,5 @@ server {
 	}
 	root /var/www/html;
 	server_name _;
-	rewrite ^/redirect_me https://github.com/waltertaya permanent;
+	rewrite ^/redirect_me https://github.com/CHEGEBB permanent;
 }
