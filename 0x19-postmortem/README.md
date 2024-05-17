@@ -14,7 +14,8 @@ A sneaky syntax error in the load balancer settings caused all traffic to pile u
 
 ### Timeline
 
-![Timeline Diagram](https://via.placeholder.com/600x200.png?text=Timeline+Diagram)
+![images](https://github.com/CHEGEBB/alx-system_engineering-devops/assets/123733116/20c8e72b-cd7d-4f77-bc93-be587bb8699c)
+
 
 - **14:00 UTC:** 🛎️ Issue detected via monitoring alert screaming "We're down!"
 - **14:05 UTC:** 🔍 On-call engineer investigates. First suspect: server failure.
@@ -60,6 +61,7 @@ Once we realized the error, we fixed the configuration script, ensuring the load
 
 To all our users who experienced the outage, thanks for your patience! And to the load balancer, consider this a lesson: sharing is caring.
 
-![Funny Image](https://via.placeholder.com/400x200.png?text=Funny+Image+About+Tech+Outages)
+![funny](https://github.com/CHEGEBB/alx-system_engineering-devops/assets/123733116/66d9f081-7d35-457f-af61-b934daa63721)
+
 
 By addressing these areas, we aim to prevent future occurrences of similar outages and improve overall system resilience. Let’s keep the servers running smoothly and the users happy! 🚀
